@@ -19,15 +19,11 @@ var instagramId = document.getElementById("instagram");
 var twitterId = document.getElementById("twitter");
 var openEyeId = document.getElementById("open_eyeId");
 var closeEyeId = document.getElementById("close_eyeId");
-////
-
-////
-////chek registr_user(Придумать как оптимизироваит функции и убрать гору ИФОВ)//////
 var inputLoginId = document.getElementById("input_login");
 var inputPasswordId = document.getElementById("input_password");
 var inputMailId = document.getElementById("input_mail");
-var button_registr_sitId = document.getElementById("button_registr_site");
-/////////////////////////
+
+////(Придумать как оптимизироваит функции и убрать гору ИФОВ)//////
 
 function funcAnimationInputLoginCalor() {
   if (inputLoginId.value.length <= 4) {
@@ -42,7 +38,6 @@ function funcAnimationInputLoginCalor() {
   }
 }
 
-/////////////////////////
 function funcAnimationInputPasswordCalor() {
   if (inputPasswordId.value.length <= 4) {
     inputPasswordId.classList.add("active_red");
@@ -55,28 +50,6 @@ function funcAnimationInputPasswordCalor() {
     inputPasswordId.classList.add("active_green");
   }
 }
-
-/////////////////////////
-try {
-  button_registr_sitId.addEventListener("click", () => {
-    //Сделать очищение полей инпут от тени при отправки данных из инпутов//
-
-    if (
-      inputLoginId.value.length >= 4 &&
-      inputPasswordId.value.length >= 4 &&
-      inputLoginId.value.length <= 10 &&
-      inputPasswordId.value.length <= 10
-    ) {
-    } else {
-      alert(
-        "Логин и пароль должны быть не менее четырех(4) и не больше десяти(10) символов!"
-      );
-    }
-  });
-} catch {}
-////chek registr_user//////
-
-////////////////////////////////////////////////////////////////////
 
 parentaLHoverId.addEventListener("mousemove", () => {
   parentaLHoverId.classList.add("active");
@@ -93,24 +66,27 @@ dontSaveId.addEventListener("click", () => {
   saveOrNotId.classList.remove("yes");
   retentionSelectionStrokeGivenId.classList.remove("active");
 });
-
-function vanish() {
-  wrapZoneLoginUsingId.classList.add("active");
-
-  setTimeout(() => {
-    wrapZoneLoginUsingId.classList.add("vanich");
-
-    telegramId.classList.add("active");
-    instagramId.classList.add("active");
-    twitterId.classList.add("active");
+try {
+  function vanish() {
+    wrapZoneLoginUsingId.classList.add("active");
 
     setTimeout(() => {
-      wrapZoneLoginUsingId.classList.remove("vanich", "active");
-      telegramId.classList.remove("active");
-      instagramId.classList.remove("active");
-      twitterId.classList.remove("active");
-    }, 4000);
-  }, 5000);
+      wrapZoneLoginUsingId.classList.add("vanich");
+
+      telegramId.classList.add("active");
+      instagramId.classList.add("active");
+      twitterId.classList.add("active");
+
+      setTimeout(() => {
+        wrapZoneLoginUsingId.classList.remove("vanich", "active");
+        telegramId.classList.remove("active");
+        instagramId.classList.remove("active");
+        twitterId.classList.remove("active");
+      }, 4000);
+    }, 5000);
+  }
+} catch (e) {
+  console.log(e, "Function: {vanish -- ERROR}");
 }
 
 loginUsingId.addEventListener("click", () => vanish());
@@ -125,9 +101,8 @@ try {
     forgotPasswordId.classList.remove("active");
     forgotYourPassworMailId.classList.remove("active");
   });
-} catch (error) {
-  const objectError = ({} = error);
-  console.log(objectError);
+} catch (e) {
+  console.log(e);
 }
 
 closeEyeId.addEventListener("click", () => {

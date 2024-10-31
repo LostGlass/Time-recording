@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Sign In</title>
+    <title>Registration</title>
     <link rel="stylesheet" href="/style/window-regist-user.css" />
     <script src="/JS/window-regist-animatoin.js" defer></script>
+    <script src="/JS/registr-on-site.js" defer></script>
   </head>
   <body>
     <span class="line_left"></span>
@@ -17,27 +18,41 @@
         <div class="wrap_input_registr">
           <div class="wrap_input_registr_login">
             <img src="/style/IMG/ikons/login.png" alt="login ikons" />
-            <input
-              placeholder="Name"
-              type="text"
-              title="Login field"
-              id="input_login"
-              class="login"
-              oninput="funcAnimationInputLoginCalor()"
-              maxlength="10"
-            />
+            <form
+              action="http://localhost:2000/server/registration"
+              method="post"
+              id="form_registr"
+            >
+              <input
+                placeholder="Login"
+                type="text"
+                title="Login field"
+                id="input_login"
+                class="login"
+                oninput="funcAnimationInputLoginCalor()"
+                maxlength="10"
+                minlength="4"
+              />
+            </form>
           </div>
           <div class="wrap_input_registr_password">
             <img src="/style/IMG/ikons/password.png" alt="password ikons" />
-            <input
-              placeholder="Password"
-              type="password"
-              title="Password field"
-              id="input_password"
-              class="password"
-              oninput="funcAnimationInputPasswordCalor()"
-              maxlength="15"
-            />
+            <form
+              id="form_registr"
+              action="http://localhost:2000/server/registration"
+              method="post"
+            >
+              <input
+                placeholder="Password"
+                type="password"
+                title="Password field"
+                id="input_password"
+                class="password"
+                oninput="funcAnimationInputPasswordCalor()"
+                maxlength="15"
+                minlength="4"
+              />
+            </form>
             <img
               src="/style/IMG/ikons/clos_Eye.png"
               alt="crossed-eye icon"
@@ -55,13 +70,19 @@
           </div>
           <div class="wrap_input_registr_mail">
             <img src="/style/IMG/ikons/mail.png" alt="mail ikons" />
-            <input
-              placeholder="Mail"
-              type="email"
-              title="Mail field"
-              id="input_mail"
-              class="mail"
-            />
+            <form
+              id="form_registr"
+              action="http://localhost:2000/server/registration"
+              method="post"
+            >
+              <input
+                placeholder="Mail"
+                type="email"
+                title="Mail field"
+                id="input_mail"
+                class="mail"
+              />
+            </form>
           </div>
           <div class="wrap_button_lo_and_registr">
             <div class="button_registr">

@@ -17,33 +17,47 @@
         <div class="wrap_input_registr">
           <div class="wrap_input_registr_login">
             <img src="/style/IMG/ikons/login.png" alt="login ikons" />
-            <input
-              placeholder="Name"
-              type="text"
-              title="Login field"
-              id="input_login"
-              class="login"
-              oninput="funcAnimationInputLoginCalor()"
-              maxlength="10"
-            />
+            <form
+              action="http://localhost:2000/server/registration"
+              method="post"
+              id="form_registr"
+            >
+              <input
+                placeholder="Name"
+                type="text"
+                title="Login field"
+                id="input_login"
+                class="login"
+                oninput="funcAnimationInputLoginCalor()"
+                maxlength="10"
+              />
+            </form>
           </div>
           <div class="wrap_input_registr_password">
             <img src="/style/IMG/ikons/password.png" alt="password ikons" />
-            <input
-              placeholder="Password"
-              type="password"
-              title="Password field"
-              id="input_password"
-              class="password"
-              oninput="funcAnimationInputPasswordCalor()"
-              maxlength="15"
-            />
+            <form
+              action="http://localhost:2000/server/registration"
+              method="post"
+              id="form_registr"
+            >
+              <input
+                placeholder="Password"
+                type="password"
+                title="Password field"
+                id="input_password"
+                class="password"
+                oninput="funcAnimationInputPasswordCalor()"
+                maxlength="15"
+              />
+            </form>
+
             <img
               src="/style/IMG/ikons/clos_Eye.png"
               alt="crossed-eye icon"
               class="close_eye_password"
               id="close_eyeId"
               title="Show password"
+              style="margin: 1px -15px"
             />
             <img
               src="/style/IMG/ikons/open_Eye.png"
@@ -51,6 +65,7 @@
               class="open_eye_password"
               id="open_eyeId"
               title="Hide password"
+              style="margin: 1px -15px"
             />
           </div>
           <div class="wrap_button_lo_and_registr">
