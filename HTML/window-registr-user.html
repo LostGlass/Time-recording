@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html no-cors>
 <html>
   <head>
     <meta charset="UTF-8" />
     <title>Registration</title>
     <link rel="stylesheet" href="/style/window-regist-user.css" />
     <script src="/JS/window-regist-animatoin.js" defer></script>
-    <script src="/JS/registr-on-site.js" defer></script>
+    <script src="/JS/registr-on-site.js" defer type="module"></script>
   </head>
   <body>
     <span class="line_left"></span>
@@ -19,9 +19,10 @@
           <div class="wrap_input_registr_login">
             <img src="/style/IMG/ikons/login.png" alt="login ikons" />
             <form
-              action="http://localhost:2000/server/registration"
+              id="form_registr_login"
               method="post"
-              id="form_registr"
+              action="http://localhost:2000/server/registration"
+              onsubmit="return true"
             >
               <input
                 placeholder="Login"
@@ -38,9 +39,11 @@
           <div class="wrap_input_registr_password">
             <img src="/style/IMG/ikons/password.png" alt="password ikons" />
             <form
-              id="form_registr"
-              action="http://localhost:2000/server/registration"
+              name="password"
+              id="form_registr_password"
               method="post"
+              action="http://localhost:2000/server/registration"
+              onsubmit="return true"
             >
               <input
                 placeholder="Password"
@@ -49,7 +52,7 @@
                 id="input_password"
                 class="password"
                 oninput="funcAnimationInputPasswordCalor()"
-                maxlength="15"
+                maxlength="10"
                 minlength="4"
               />
             </form>
@@ -71,9 +74,10 @@
           <div class="wrap_input_registr_mail">
             <img src="/style/IMG/ikons/mail.png" alt="mail ikons" />
             <form
-              id="form_registr"
-              action="http://localhost:2000/server/registration"
+              id="form_registr_mail"
               method="post"
+              action="http://localhost:2000/server/registration"
+              onsubmit="return true"
             >
               <input
                 placeholder="Mail"

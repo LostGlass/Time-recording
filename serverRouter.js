@@ -12,7 +12,8 @@ router.post(
     check(
       "userpassword",
       "The password must be more than four characters and no more than eighteen, and must also contain special characters."
-    ).isLength({ min: 4, max: 18 }),
+    ),
+    [check("usermail", "Unsatisfactory content of the mail field.")],
   ],
 
   conroller.registration
