@@ -30,17 +30,13 @@ try {
           body: JSON.stringify(dataUsersObject),
           mode: "no-cors",
           headers: {
-            "Content-Type": "application/json;charset=utf-8",
+            "Content-Type": "application/json; charset=utf-8",
           },
         }
       );
 
-      if (response.ok) {
-        let json = await response.json();
-        console.log(json);
-      } else {
-        alert("Ошибка HTTP: " + response.status);
-      }
+      var json = await response.text;
+      console.log(json);
     };
   });
 } catch (e) {
