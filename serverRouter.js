@@ -7,7 +7,7 @@ var RoleMiddleWare = require("./serverMiddleWare.js/Action-for-administrator-med
 
 router.post(
   "/registration",
-  [check("username", "Username cannot be empty.").notEmpty()],
+  [check("username", `Username cannot be empty.`).notEmpty()],
   [
     check(
       "userpassword",

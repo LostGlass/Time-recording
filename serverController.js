@@ -25,6 +25,7 @@ class serverController {
     }
     try {
       var { username, userpassword, usermail } = req.body;
+      console.log(username, userpassword, usermail);
       var userSearchNameBd = await User.findOne({ username });
       var userSearchMailBd = await User.findOne({ usermail });
 
@@ -53,6 +54,7 @@ class serverController {
       return res.json({ massage: "You have successfully registered." });
     } catch (e) {
       console.log(e);
+
       res.status(400).json({ massage: "Registration  error." });
     }
   }
