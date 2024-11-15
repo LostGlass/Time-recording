@@ -25,7 +25,20 @@ class serverController {
     }
     try {
       var { username, userpassword, usermail } = req.body;
-      console.log(username, userpassword, usermail);
+      console.log(
+        "username:",
+        "{",
+        username,
+        "}",
+        "userpassword:",
+        "{",
+        userpassword,
+        "}",
+        "usermail:",
+        "{",
+        usermail,
+        "}"
+      );
       var userSearchNameBd = await User.findOne({ username });
       var userSearchMailBd = await User.findOne({ usermail });
 
