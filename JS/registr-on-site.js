@@ -6,33 +6,60 @@ var form = document.querySelector("form");
 ///////////////////////
 
 try {
-  buttonRegistrSitId.addEventListener("click", e => {
-    console.log("click");
-
-    form.addEventListener("submit", async e => {
-      e.preventDefault();
-      function DataUsersObject() {
-        (this.username = inputLogin.value),
-          (this.userpassword = inputPassword.value),
-          (this.usermail = inputMail.value);
-      }
-      const dataUsersObject = new DataUsersObject();
-      const response = await fetch(
-        "http://localhost:2000/server/registration",
-        {
-          method: "POST",
-          body: JSON.stringify(dataUsersObject),
-          mode: "cors",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          cache: "default",
-        }
-      );
-      var json = await response.json();
-      console.log(json);
-    });
-  });
+  // buttonRegistrSitId.addEventListener("click", e => {
+  //   console.log("click");
+  //   form.addEventListener("submit", async e => {
+  //     e.preventDefault();
+  //     function DataUsersObject() {
+  //       (this.username = inputLogin.value),
+  //         (this.userpassword = inputPassword.value),
+  //         (this.usermail = inputMail.value);
+  //     }
+  //     const dataUsersObject = new DataUsersObject();
+  //     const response = await fetch(
+  //       "http://localhost:2000/server/registration",
+  //       {
+  //         method: "POST",
+  //         body: JSON.stringify(dataUsersObject),
+  //         mode: "cors",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         cache: "default",
+  //       }
+  //     );
+  //     var json = await response.json();
+  //     console.log(json);
+  //   });
+  // });
 } catch (e) {
   console.log(e);
 }
+
+async function testeFetch() {
+  function DataUsersObject() {
+    (this.username = inputLogin.value),
+      (this.userpassword = inputPassword.value),
+      (this.usermail = inputMail.value);
+  }
+  v;
+
+  const dataUsersObject = new DataUsersObject();
+  const response = await fetch("http://localhost:2000/server/registration", {
+    method: "POST",
+    body: JSON.stringify(dataUsersObject),
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    cache: "default",
+  });
+
+  var json = await response.json();
+  return alert(json.massage);
+}
+
+buttonRegistrSitId.addEventListener("click", () => {
+  testeFetch();
+  // form.submit();
+});

@@ -16,15 +16,23 @@
       </div>
       <div class="position_registration_window">
         <div class="wrap_input_registr">
-          <div class="wrap_input_registr_login">
-            <img src="/style/IMG/ikons/login.png" alt="login ikons" />
-            <form
-              id="form_registr_login"
-              method="post"
-              action="http://localhost:2000/server/registration"
-            >
+          <form
+            method="post"
+            action="http://localhost:2000/server/registration"
+          >
+            <div class="wrap_input_registr_login">
+              <img src="/style/IMG/ikons/login.png" alt="login ikons" />
+
+              <!-- <form
+                name="username"
+                class="form_registr_login"
+                id="form_registr_login"
+                method="post"
+                action="http://localhost:2000/server/registration"
+              > -->
               <input
                 required
+                name="username"
                 placeholder="Login"
                 type="text"
                 title="Login field"
@@ -34,18 +42,20 @@
                 maxlength="10"
                 minlength="4"
               />
-            </form>
-          </div>
-          <div class="wrap_input_registr_password">
-            <img src="/style/IMG/ikons/password.png" alt="password ikons" />
-            <form
-              name="password"
-              id="form_registr_password"
-              method="post"
-              action="http://localhost:2000/server/registration"
-            >
+              <!-- </form> -->
+            </div>
+            <div class="wrap_input_registr_password">
+              <img src="/style/IMG/ikons/password.png" alt="password ikons" />
+              <!-- <form
+                class="form_registr_password"
+                name="password"
+                id="form_registr_password"
+                method="post"
+                action="http://localhost:2000/server/registration"
+              > -->
               <input
                 required
+                name="userpassword"
                 placeholder="Password"
                 type="password"
                 title="Password field"
@@ -55,54 +65,60 @@
                 maxlength="10"
                 minlength="4"
               />
-            </form>
-            <img
-              src="/style/IMG/ikons/clos_Eye.png"
-              alt="crossed-eye icon"
-              class="close_eye_password"
-              id="close_eyeId"
-              title="Show password"
-            />
-            <img
-              src="/style/IMG/ikons/open_Eye.png"
-              alt="crossed-eye icon"
-              class="open_eye_password"
-              id="open_eyeId"
-              title="Hide password"
-            />
-          </div>
-          <div class="wrap_input_registr_mail">
-            <img src="/style/IMG/ikons/mail.png" alt="mail ikons" />
-            <form
-              id="form_registr_mail"
-              method="post"
-              action="http://localhost:2000/server/registration"
-            >
+              <!-- </form> -->
+
+              <img
+                src="/style/IMG/ikons/clos_Eye.png"
+                alt="crossed-eye icon"
+                class="close_eye_password"
+                id="close_eyeId"
+                title="Show password"
+              />
+              <img
+                src="/style/IMG/ikons/open_Eye.png"
+                alt="crossed-eye icon"
+                class="open_eye_password"
+                id="open_eyeId"
+                title="Hide password"
+              />
+            </div>
+            <div class="wrap_input_registr_mail">
+              <img src="/style/IMG/ikons/mail.png" alt="mail ikons" />
+              <!-- <form
+                class="form_registr_mail"
+                name="usermail"
+                id="form_registr_mail"
+                method="post"
+                action="http://localhost:2000/server/registration"
+              > -->
               <input
                 required
+                name="usermail"
                 placeholder="Mail"
                 type="email"
                 title="Mail field"
                 id="input_mail"
                 class="mail"
               />
-            </form>
-          </div>
-          <div class="wrap_button_lo_and_registr">
-            <div class="button_registr">
-              <button id="button_registr_site">Register on the site</button>
-              <button
-                style="
-                  position: relative;
-                  right: 10px;
-                  padding: 2px;
-                  height: 22px;
-                "
-              >
-                <a href="/HTML/window-log.html">To come in</a>
-              </button>
+              <!-- </form> -->
             </div>
-          </div>
+
+            <div class="wrap_button_lo_and_registr">
+              <div class="button_registr">
+                <button id="button_registr_site">Register on the site</button>
+                <button
+                  style="
+                    position: relative;
+                    right: 10px;
+                    padding: 2px;
+                    height: 22px;
+                  "
+                >
+                  <a href="/HTML/window-log.html">To come in</a>
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
 
         <div class="restore_password_and_toComeIn">
