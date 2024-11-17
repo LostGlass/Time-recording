@@ -2,64 +2,62 @@ var inputLogin = document.getElementById("input_login");
 var inputPassword = document.getElementById("input_password");
 var inputMail = document.getElementById("input_mail");
 var buttonRegistrSitId = document.getElementById("button_registr_site");
-var form = document.querySelector("form");
+var allInput = document.getElementById(
+  "input_login",
+  "input_password",
+  "input_mail"
+);
 ///////////////////////
 
 try {
-  // buttonRegistrSitId.addEventListener("click", e => {
-  //   console.log("click");
-  //   form.addEventListener("submit", async e => {
-  //     e.preventDefault();
-  //     function DataUsersObject() {
-  //       (this.username = inputLogin.value),
-  //         (this.userpassword = inputPassword.value),
-  //         (this.usermail = inputMail.value);
-  //     }
-  //     const dataUsersObject = new DataUsersObject();
-  //     const response = await fetch(
-  //       "http://localhost:2000/server/registration",
-  //       {
-  //         method: "POST",
-  //         body: JSON.stringify(dataUsersObject),
-  //         mode: "cors",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         cache: "default",
-  //       }
-  //     );
-  //     var json = await response.json();
-  //     console.log(json);
-  //   });
-  // });
+  async function sendingUserRegistrationDataToTheServer() {
+    function DataUsersObject() {
+      (this.username = inputLogin.value),
+        (this.userpassword = inputPassword.value),
+        (this.usermail = inputMail.value);
+    }
+
+    const dataUsersObject = new DataUsersObject();
+    const response = await fetch("http://localhost:2000/server/registration", {
+      method: "POST",
+      body: JSON.stringify(dataUsersObject),
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      cache: "default",
+    });
+
+    var json = await response.json();
+    return alert(json.massage);
+  }
+
+  buttonRegistrSitId.addEventListener("click", () => {
+    sendingUserRegistrationDataToTheServer();
+  });
+
+  inputLogin.addEventListener("keydown", e => {
+    if (e.keyCode == 13) {
+      console.log("enter!");
+      sendingUserRegistrationDataToTheServer();
+    }
+  });
+
+  inputPassword.addEventListener("keydown", e => {
+    if (e.keyCode == 13) {
+      sendingUserRegistrationDataToTheServer();
+      console.log("sdg");
+    }
+  });
+
+  inputMail.addEventListener("keydown", e => {
+    if (e.keyCode == 13) {
+      sendingUserRegistrationDataToTheServer();
+      console.log("sdg");
+    }
+  });
 } catch (e) {
   console.log(e);
 }
 
-async function testeFetch() {
-  function DataUsersObject() {
-    (this.username = inputLogin.value),
-      (this.userpassword = inputPassword.value),
-      (this.usermail = inputMail.value);
-  }
-  v;
-
-  const dataUsersObject = new DataUsersObject();
-  const response = await fetch("http://localhost:2000/server/registration", {
-    method: "POST",
-    body: JSON.stringify(dataUsersObject),
-    mode: "cors",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    cache: "default",
-  });
-
-  var json = await response.json();
-  return alert(json.massage);
-}
-
-buttonRegistrSitId.addEventListener("click", () => {
-  testeFetch();
-  // form.submit();
-});
+// buttonItems.forEach((buttonItem) => buttonItem.addEventListener('click', (e) => e.preventDefault());
