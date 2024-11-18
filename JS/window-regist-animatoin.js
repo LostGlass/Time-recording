@@ -58,14 +58,20 @@ parentaLHoverId.addEventListener("mouseout", () => {
   parentaLHoverId.classList.remove("active");
 });
 
-saveId.addEventListener("click", () => {
-  saveOrNotId.classList.add("yes");
-  retentionSelectionStrokeGivenId.classList.add("active");
-});
-dontSaveId.addEventListener("click", () => {
-  saveOrNotId.classList.remove("yes");
-  retentionSelectionStrokeGivenId.classList.remove("active");
-});
+try {
+  saveId.addEventListener("click", () => {
+    saveOrNotId.classList.add("yes");
+    retentionSelectionStrokeGivenId.classList.add("active");
+  });
+
+  dontSaveId.addEventListener("click", () => {
+    saveOrNotId.classList.remove("yes");
+    retentionSelectionStrokeGivenId.classList.remove("active");
+  });
+} catch (e) {
+  console.log(e);
+}
+
 try {
   function vanish() {
     wrapZoneLoginUsingId.classList.add("active");

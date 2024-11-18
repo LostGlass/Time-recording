@@ -17,6 +17,7 @@ var timeControlWindowRoll = document.getElementById(
 var ikonsTimeControlWindowRoll = document.getElementById(
   "ikons_time_control_window_roll_id"
 );
+var exitInRegistration = document.getElementById("exit_in_registration");
 // БЛОК С ID (КОНЕЦ)//
 
 // БЛОК ОБЬЯВЛЕНИЯ ДАННЫХ(НАЧАЛО)//
@@ -59,8 +60,10 @@ function generateSaveTimeBloc(readout, objectSavingTimeDataToLocalStorage) {
     JSON.stringify(objectSavingTimeDataToLocalStorage)
   );
 }
-
 // БЛОК С АКТИВНЫМИ СОБЫТИЯМИ (НАЧАЛО)//
+exitInRegistration.addEventListener("click", () => {
+  localStorage.getItem();
+});
 
 timeControlWindowRoll.addEventListener("click", () => {
   timeBlock.classList.toggle("active");

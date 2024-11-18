@@ -74,6 +74,16 @@ class serverController {
   async login(req, res) {
     try {
       var { username, userpassword, usermail } = req.body;
+      console.log(
+        "username:",
+        "{",
+        username,
+        "}",
+        "userpassword:",
+        "{",
+        userpassword,
+        "}"
+      );
       var userNameValidationSercBd = await User.findOne({ username });
       var usermailValidationSercBd = await User.findOne({ usermail });
 

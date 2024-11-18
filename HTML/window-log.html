@@ -5,6 +5,7 @@
     <title>Sign In</title>
     <link rel="stylesheet" href="/style/window-regist-user.css" />
     <script src="/JS/window-regist-animatoin.js" defer></script>
+    <script src="/JS/login-on-the-site.js" defer></script>
   </head>
   <body>
     <span class="line_left"></span>
@@ -17,40 +18,28 @@
         <div class="wrap_input_registr">
           <div class="wrap_input_registr_login">
             <img src="/style/IMG/ikons/login.png" alt="login ikons" />
-            <form
-              action="http://localhost:2000/server/registration"
-              method="post"
-              id="form_registr"
-            >
-              <input
-                placeholder="Name"
-                type="text"
-                title="Login field"
-                id="input_login"
-                class="login"
-                oninput="funcAnimationInputLoginCalor()"
-                maxlength="10"
-              />
-            </form>
+
+            <input
+              placeholder="Name"
+              type="text"
+              title="Login field"
+              id="input_login"
+              class="login"
+              oninput="funcAnimationInputLoginCalor()"
+              maxlength="10"
+            />
           </div>
           <div class="wrap_input_registr_password">
             <img src="/style/IMG/ikons/password.png" alt="password ikons" />
-            <form
-              action="http://localhost:2000/server/registration"
-              method="post"
-              id="form_registr"
-            >
-              <input
-                placeholder="Password"
-                type="password"
-                title="Password field"
-                id="input_password"
-                class="password"
-                oninput="funcAnimationInputPasswordCalor()"
-                maxlength="15"
-              />
-            </form>
-
+            <input
+              placeholder="Password"
+              type="password"
+              title="Password field"
+              id="input_password"
+              class="password"
+              oninput="funcAnimationInputPasswordCalor()"
+              maxlength="15"
+            />
             <img
               src="/style/IMG/ikons/clos_Eye.png"
               alt="crossed-eye icon"
@@ -68,9 +57,10 @@
               style="margin: 1px -15px"
             />
           </div>
+
           <div class="wrap_button_lo_and_registr">
             <div class="button_registr">
-              <button id="button_registr_site">Register on the site</button>
+              <button id="button_login_site">Login on the site</button>
               <button
                 style="
                   position: relative;
@@ -134,7 +124,7 @@
           </div>
         </div>
       </div>
-      <footer
+      <!-- <footer
         class="foter_form_regist_window"
         style="top: 178px; position: relative"
       >
@@ -148,7 +138,7 @@
           <div class="content_footer" id="save_or_not"></div>
         </div>
         <div class="remember_data">Remember my details when registering</div>
-      </footer>
+      </footer> -->
     </div>
     <span class="line_bottom"></span>
     <span class="line_right"></span>
