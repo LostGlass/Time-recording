@@ -1,5 +1,4 @@
 // БЛОК С ID (НАЧАЛО)//
-
 var startTimerOnClick = document.getElementById("start_time");
 var stopTimerOnClick = document.getElementById("stop_time");
 var saveTime = document.getElementById("SaveTime");

@@ -2,7 +2,26 @@ var inputLogin = document.getElementById("input_login");
 var inputPassword = document.getElementById("input_password");
 var buttonLoginSite = document.getElementById("button_login_site");
 
-async function sendingUserRegistrationDataToTheServer() {
+function parseJwtIdEndSaveLocalStorage(parseJwtToken, jwtToken) {
+  const base64Url = parseJwtToken.split(".")[1];
+  const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+  const jsonPayload = decodeURIComponent(
+    atob(base64)
+      .split("")
+      .map(function (c) {
+        return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+      })
+      .join("")
+  );
+  return (
+    localStorage.setItem(jsonPayload, JSON.stringify(jwtToken)),
+    (window.location.href = "http://127.0.0.1:5500/HTML/")
+  );
+}
+
+async function sendingUserRegistrationDataToTheServer(
+  parseJwtIdEndSaveLocalStorage
+) {
   function DataUsersObjectBd() {
     (this.username = inputLogin.value),
       (this.userpassword = inputPassword.value);
@@ -13,50 +32,33 @@ async function sendingUserRegistrationDataToTheServer() {
     method: "POST",
     body: JSON.stringify(dataUsersObjectBd),
     mode: "cors",
-    Authorization: "Bearer",
     headers: {
       "Content-Type": "application/json; charset=utf-8",
-      Authorization: `Bearer ${jwtToken}`,
     },
-    cache: "default",
   });
 
   var jwtToken = await response.json();
-  var test = JSON.stringify(jwtToken);
 
-  function parseJwtIdEndSaveLocalStorage(token) {
-    const base64Url = token.split(".")[1];
-    const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
-    const jsonPayload = decodeURIComponent(
-      atob(base64)
-        .split("")
-        .map(function (c) {
-          return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
-        })
-        .join("")
-    );
-    return (
-      localStorage.setItem(jsonPayload, JSON.stringify(jwtToken)),
-      console.log(JSON.parse(jsonPayload)),
-      (window.location.href = "http://127.0.0.1:5500/HTML/")
-    );
+  if (typeof jwtToken === "object" && response.status === 200) {
+    var parseJwtToken = JSON.stringify(jwtToken);
+    return parseJwtIdEndSaveLocalStorage(parseJwtToken, jwtToken);
+  } else {
+    alert(jwtToken.massage);
   }
-
-  return parseJwtIdEndSaveLocalStorage(test);
 }
 
 buttonLoginSite.addEventListener("click", () => {
-  sendingUserRegistrationDataToTheServer();
+  sendingUserRegistrationDataToTheServer(parseJwtIdEndSaveLocalStorage);
 });
 
 inputLogin.addEventListener("keydown", e => {
   if (e.keyCode == 13) {
-    sendingUserRegistrationDataToTheServer();
+    sendingUserRegistrationDataToTheServer(parseJwtIdEndSaveLocalStorage);
   }
 });
 
 inputPassword.addEventListener("keydown", e => {
   if (e.keyCode == 13) {
-    sendingUserRegistrationDataToTheServer();
+    sendingUserRegistrationDataToTheServer(parseJwtIdEndSaveLocalStorage);
   }
 });
