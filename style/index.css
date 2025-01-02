@@ -313,7 +313,8 @@ body {
   height: 13px;
   margin-top: 2px;
 }
-.action_confirmation .button_yes, .action_confirmation .button_no {
+.action_confirmation .button_yes,
+.action_confirmation .button_no {
   color: rgb(253, 255, 252);
   z-index: 7;
   font-family: "Courier New", Courier, monospace;

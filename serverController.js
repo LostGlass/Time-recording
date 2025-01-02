@@ -118,6 +118,14 @@ class serverController {
       res.status(400).json({ massage: "Login  error." });
     }
   }
+  async html(req, res) {
+    try {
+      res.json("work?");
+    } catch (e) {
+      res.json("ERROR!");
+    }
+  }
+
   async getUsers(req, res) {
     try {
       var allUsers = await User.find();

@@ -1,17 +1,16 @@
 $fontFamily: "Courier New", Courier, monospace;
 $mainColor: rgba(124, 14, 124, 0.658);
-$mainColorUpWindow:rgba(124, 14, 124, 0.952);
-$mainBoxShadow:  0px 8px  20px 2px gold;
-$bg:#1a1f25;
-$button:#e6b333;
-$border:#22272d;
+$mainColorUpWindow: rgba(124, 14, 124, 0.952);
+$mainBoxShadow: 0px 8px 20px 2px gold;
+$bg: #1a1f25;
+$button: #e6b333;
+$border: #22272d;
 
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: $fontFamily;
 }
-
 
 body {
   min-height: 100vh;
@@ -22,175 +21,145 @@ body {
   align-items: center;
   justify-content: center;
   color: $button;
-  
 }
 
-input{
+input {
   outline: none;
 }
- 
 
-input::placeholder{
+input::placeholder {
   padding-left: 5px;
-  color:rgba(250, 235, 215, 0.651);
+  color: rgba(250, 235, 215, 0.651);
 }
 
-
-
-
-
 //////////////////////////////
-
 
 // .button_registr{
 
 // }
 
 .wrap_registr_form {
-width:380px;
-height: 400px;
-transition: 0.5s all ;
-background-color: #1a1f25bb;
+  width: 380px;
+  height: 400px;
+  transition: 0.5s all;
+  background-color: #1a1f25bb;
 }
 
-
-.wrap_registr_form.active{
+.wrap_registr_form.active {
   margin: 15px;
-  transition: 0.5s all ;
+  transition: 0.5s all;
 }
 
-
-
-.position_registration_window{
+.position_registration_window {
   top: 20px;
   position: relative;
 }
 
-
-
-
-
-
-.Heading_regisr_form{
+.Heading_regisr_form {
   bottom: 5px;
   display: flex;
   position: relative;
   justify-content: center;
 }
 
-.wrap_input_registr{
+.wrap_input_registr {
   left: 15px;
   top: 10px;
   border: none;
   display: inline;
   position: relative;
   background-color: #1a1f2500;
-
-
 }
 
-
-
-.login{
+.login {
   border: none;
   color: $button;
   margin-bottom: 8px;
-  background-color:rgba(250, 235, 215, 0.137);
-  &:focus{
+  background-color: rgba(250, 235, 215, 0.137);
+  &:focus {
     transition: 1s all;
-    box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.7),
-     1px 2px 4px 0px rgba(0,255,255,0.7),
-     2px 4px 8px 0px rgba(0,255,255,0.7),
-     2px 4px 16px 0px rgba(0,255,255,0.7);
+    box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
+      1px 2px 4px 0px rgba(0, 255, 255, 0.7),
+      2px 4px 8px 0px rgba(0, 255, 255, 0.7),
+      2px 4px 16px 0px rgba(0, 255, 255, 0.7);
   }
 }
 
-.login.active_red{
+.login.active_red {
   color: rgba(255, 0, 0, 0.7);
-  &:focus{
+  &:focus {
     transition: 1s all;
     color: rgba(255, 0, 0, 0.7);
     box-shadow: 0px 1px 2px 0px rgba(255, 0, 0, 0.7),
-     1px 2px 4px 0px  rgba(255, 0, 0, 0.7),
-     2px 4px 8px 0px  rgba(255, 0, 0, 0.7),
-     2px 4px 16px 0px  rgba(255, 0, 0, 0.7);
+      1px 2px 4px 0px rgba(255, 0, 0, 0.7), 2px 4px 8px 0px rgba(255, 0, 0, 0.7),
+      2px 4px 16px 0px rgba(255, 0, 0, 0.7);
   }
 }
 
-
-.login.active_green{
+.login.active_green {
   color: rgba(102, 255, 0, 0.7);
-  &:focus{
+  &:focus {
     transition: 1s all;
     color: rgba(102, 255, 0, 0.7);
     box-shadow: 0px 1px 2px 0px rgba(102, 255, 0, 0.7),
-     1px 2px 4px 0px rgba(102, 255, 0, 0.7),
-     2px 4px 8px 0px rgba(102, 255, 0, 0.7),
-     2px 4px 16px 0px rgba(102, 255, 0, 0.7);
+      1px 2px 4px 0px rgba(102, 255, 0, 0.7),
+      2px 4px 8px 0px rgba(102, 255, 0, 0.7),
+      2px 4px 16px 0px rgba(102, 255, 0, 0.7);
   }
-
 }
 
-
-
-
-.password{
+.password {
   border: none;
   color: $button;
   margin-bottom: 8px;
-  background-color:rgba(250, 235, 215, 0.137);
-  &:focus{
+  background-color: rgba(250, 235, 215, 0.137);
+  &:focus {
     transition: 1s all;
-    box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.7),
-    1px 2px 4px 0px rgba(0,255,255,0.7),
-    2px 4px 8px 0px rgba(0,255,255,0.7),
-    2px 4px 16px 0px rgba(0,255,255,0.7);
+    box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
+      1px 2px 4px 0px rgba(0, 255, 255, 0.7),
+      2px 4px 8px 0px rgba(0, 255, 255, 0.7),
+      2px 4px 16px 0px rgba(0, 255, 255, 0.7);
     // box-shadow: 0px 1px 2px 0px gold,
     // 1px 2px 4px 0px gold,
     // 2px 4px 8px 0px gold,
     //  2px 4px 16px 0px gold;
- }
+  }
 }
 
-
-.password.active_red{
+.password.active_red {
   color: rgba(255, 0, 0, 0.7);
-  &:focus{
-   color: rgba(255, 0, 0, 0.7);
+  &:focus {
+    color: rgba(255, 0, 0, 0.7);
     transition: 1s all;
     box-shadow: 0px 1px 2px 0px rgba(255, 0, 0, 0.7),
-     1px 2px 4px 0px  rgba(255, 0, 0, 0.7),
-     2px 4px 8px 0px  rgba(255, 0, 0, 0.7),
-     2px 4px 16px 0px  rgba(255, 0, 0, 0.7);
+      1px 2px 4px 0px rgba(255, 0, 0, 0.7), 2px 4px 8px 0px rgba(255, 0, 0, 0.7),
+      2px 4px 16px 0px rgba(255, 0, 0, 0.7);
   }
-
 }
 
-.password.active_green{
+.password.active_green {
   color: rgba(102, 255, 0, 0.7);
-  &:focus{
+  &:focus {
     transition: 1s all;
     color: rgba(102, 255, 0, 0.7);
     box-shadow: 0px 1px 2px 0px rgba(102, 255, 0, 0.7),
-     1px 2px 4px 0px rgba(102, 255, 0, 0.7),
-     2px 4px 8px 0px rgba(102, 255, 0, 0.7),
-     2px 4px 16px 0px rgba(102, 255, 0, 0.7);
+      1px 2px 4px 0px rgba(102, 255, 0, 0.7),
+      2px 4px 8px 0px rgba(102, 255, 0, 0.7),
+      2px 4px 16px 0px rgba(102, 255, 0, 0.7);
   }
 }
 
-
-.mail{
+.mail {
   border: none;
   color: $button;
-  background-color:rgba(250, 235, 215, 0.137);
-  &:focus{
-    box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.7),
-    1px 2px 4px 0px rgba(0,255,255,0.7),
-    2px 4px 8px 0px rgba(0,255,255,0.7),
-     2px 4px 16px 0px rgba(0,255,255,0.7);
- }
+  background-color: rgba(250, 235, 215, 0.137);
+  &:focus {
+    box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
+      1px 2px 4px 0px rgba(0, 255, 255, 0.7),
+      2px 4px 8px 0px rgba(0, 255, 255, 0.7),
+      2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+  }
 }
-
 
 // .close_eye{
 //   width: 20px;
@@ -199,135 +168,110 @@ background-color: #1a1f25bb;
 //   border: none;
 // }
 
-.registration_window_warning.active{
-  img{
+.registration_window_warning.active {
+  img {
     display: none;
     cursor: pointer;
     width: 16px;
     height: 16px;
-    
-         
-   }
+  }
 }
 
-
-
-
-
-
-
-.wrap_input_registr_login{
+.wrap_input_registr_login {
   display: flex;
- img{
-   margin-right: 5px;
-   width: 16px;
-   height: 16px;
-   border: 1px solid rgba(248, 248, 248, 0.705);
- }
-} 
+  img {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(248, 248, 248, 0.705);
+  }
+}
 
-
-
-
-.wrap_input_registr_password{
+.wrap_input_registr_password {
   display: flex;
 
-
-
-  .close_eye_password{
+  .close_eye_password {
     width: 13px;
     height: 13px;
     border: none;
-    margin: 3px  -15px;
+    margin: 3px -15px;
     border-radius: 3px;
     cursor: pointer;
   }
-  .open_eye_password{
+  .open_eye_password {
     width: 13px;
     height: 13px;
     border: none;
-    margin: 3px  -15px;
+    margin: 3px -15px;
     border-radius: 3px;
     cursor: pointer;
     display: none;
-
-   
   }
 
- img{
-   margin-right: 5px;
-   width: 16px;
-   height: 16px;
-   border: 1px solid rgba(248, 248, 248, 0.705);
- }
- }
+  img {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(248, 248, 248, 0.705);
+  }
+}
 
-
- .close_eye_password.active{
+.close_eye_password.active {
   display: none;
   transition: 0.5s all;
-
- }
- .open_eye_password.active{
+}
+.open_eye_password.active {
   display: block;
   transition: 0.5s all;
+}
 
- }
-
-
-
-
-
-.wrap_input_registr_mail{
+.wrap_input_registr_mail {
   display: flex;
- img{
-   margin-right: 5px;
-   width: 16px;
-   height: 16px;
-   border: 1px solid rgba(248, 248, 248, 0.705);
- }
- }
+  img {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(248, 248, 248, 0.705);
+  }
+}
 
-
-.wrap_button_lo_and_registr{
+.wrap_button_lo_and_registr {
   display: flex;
   margin-top: 10px;
   margin-right: 40px;
   align-items: center;
   justify-content: center;
 
-  button{
-  cursor: pointer;
-  margin-left: 3px;
-  color: $button;
-  margin-right: 5px;
-  padding: 2px;
-  background-color:rgba(250, 235, 215, 0.068);
-
-  &:hover{
-  background-color:rgba(250, 235, 215, 0.233);
-  }
-  a{
+  button {
+    cursor: pointer;
+    margin-left: 3px;
     color: $button;
-    text-decoration: none;
-    background-color:rgba(0, 0, 0, 0.068);
-  }
-  }
-  }
+    margin-right: 5px;
+    padding: 2px;
+    background-color: rgba(250, 235, 215, 0.068);
 
+    &:hover {
+      background-color: rgba(250, 235, 215, 0.233);
+    }
+    a {
+      color: $button;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.068);
+    }
+  }
+}
 
-
-.restore_password_and_toComeIn{
+.restore_password_and_toComeIn {
   top: 20px;
   height: 50px;
   position: relative;
   margin-right: 10px;
   color: rgba(248, 248, 248, 0.705);
-  span{
+  span {
     color: $button;
   }
 
-  h5{
+  h5 {
     margin: 0px;
     cursor: pointer;
     margin-left: 10px;
@@ -340,37 +284,33 @@ background-color: #1a1f25bb;
       transition: 0.5s all;
     }
   }
-  a{
+  a {
     color: $button;
-    text-decoration:none;
+    text-decoration: none;
     transition: 0.5s all;
 
-    &:hover{
+    &:hover {
       color: gold;
       transition: 0.5s all;
     }
   }
 }
 
-
-
-.forgot_your_password_mail{
-     display: none;
- img{
-   margin-right: 5px;
-   width: 16px;
-   height: 16px;
-   border: 1px solid rgba(248, 248, 248, 0.705);
- }
- }
-.forgot_your_password_mail.active{
-  height: 18px; ;
-  display:flex;
- 
- 
+.forgot_your_password_mail {
+  display: none;
+  img {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(248, 248, 248, 0.705);
+  }
+}
+.forgot_your_password_mail.active {
+  height: 18px;
+  display: flex;
 }
 
-.button_remove_vanich_mail{
+.button_remove_vanich_mail {
   border: none;
   width: 40px;
   height: 18px;
@@ -378,159 +318,150 @@ background-color: #1a1f25bb;
   color: $button;
   margin-left: 2px;
   margin-bottom: 8px;
-  background-color:rgba(250, 235, 215, 0.137);
-  &:hover{
-    cursor: pointer;;
-    background-color:rgba(248, 5, 5, 0.295);
+  background-color: rgba(250, 235, 215, 0.137);
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(248, 5, 5, 0.295);
   }
 }
 
-.forgot_password{
-top: 5px;
-display: flex;
-position: relative;
-align-items: center;
-justify-content: center;
-}
-
-.vanich_forgot_password_id.active{
-  display: none;
-}
-
-.button_remove_vanich{
-  margin-left: 2px;
-}
-
-.login_using{
+.forgot_password {
+  top: 5px;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
-  
 }
 
+.vanich_forgot_password_id.active {
+  display: none;
+}
 
-.wrap_zone_login_using{
+.button_remove_vanich {
+  margin-left: 2px;
+}
+
+.login_using {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap_zone_login_using {
   top: 20px;
   opacity: 0;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
-  
-  a{
+
+  a {
     visibility: hidden;
     margin-left: 20px;
 
-    
-    img{
+    img {
       width: 30px;
       height: 30px;
       transition: 0.3s all;
 
-      &:hover{
+      &:hover {
         transition: 0.3s all;
         transform: scale(1.2);
-      }    
+      }
     }
-
   }
 }
 
-.wrap_zone_login_using.active{
+.wrap_zone_login_using.active {
   opacity: 1;
-a{
-  visibility: visible;
-}
+  a {
+    visibility: visible;
+  }
 }
 
-.wrap_zone_login_using.vanich{
+.wrap_zone_login_using.vanich {
   animation: vanich 7s ease forwards;
 }
 
-
-@keyframes vanichTelegram{
+@keyframes vanichTelegram {
   from {
-  opacity: 1;
-  top: 1px;
-  position: relative;
-  visibility: visible;
-  }
-  to{
-  opacity: 0;
-  top: 80px;
-  position: relative;
-  visibility: hidden;
-  }
-  }
-  
-
-  @keyframes vanichInstagram{
-    from {
     opacity: 1;
     top: 1px;
     position: relative;
     visibility: visible;
-    }
-    to{
+  }
+  to {
     opacity: 0;
     top: 80px;
     position: relative;
     visibility: hidden;
-    }
-    }
-
-    @keyframes vanichTwitter{
-      from {
-      opacity: 1;
-      top: 1px;
-      position: relative;
-      visibility: visible;
-      }
-      to{
-      opacity: 0;
-      top: 80px;
-      position: relative;
-      visibility: hidden;
-      }
-      }
-
-@keyframes vanich{
-from {
-opacity: 1;
-top: 20px;
-visibility: visible;
-}
-to{
-opacity: 0;
-top: 80px;
-visibility: hidden;
-}
+  }
 }
 
+@keyframes vanichInstagram {
+  from {
+    opacity: 1;
+    top: 1px;
+    position: relative;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    top: 80px;
+    position: relative;
+    visibility: hidden;
+  }
+}
 
-.telegram.active{
+@keyframes vanichTwitter {
+  from {
+    opacity: 1;
+    top: 1px;
+    position: relative;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    top: 80px;
+    position: relative;
+    visibility: hidden;
+  }
+}
+
+@keyframes vanich {
+  from {
+    opacity: 1;
+    top: 20px;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    top: 80px;
+    visibility: hidden;
+  }
+}
+
+.telegram.active {
   animation: vanichTelegram 3s ease forwards;
 }
 
-.instagram.active{
+.instagram.active {
   animation: vanichInstagram 4s ease forwards;
 }
-.twitter.active{
+.twitter.active {
   animation: vanichTwitter 6s ease forwards;
 }
 
-
-
-.foter_form_regist_window{
+.foter_form_regist_window {
   left: 10px;
   top: 205px;
-  font-size:small;
+  font-size: small;
   position: relative;
-  color: rgba(248, 248, 248, 0.705) ;
+  color: rgba(248, 248, 248, 0.705);
 }
 
-.remember_data{
+.remember_data {
   left: 50px;
   bottom: 20px;
   position: relative;
@@ -546,7 +477,7 @@ visibility: hidden;
   // }
 }
 
-.foter_form_regist{
+.foter_form_regist {
   display: flex;
   cursor: pointer;
   max-width: 40px;
@@ -554,29 +485,27 @@ visibility: hidden;
   align-items: center;
   transition: 0.3s all;
   justify-content: center;
-  border: 1px solid   rgba(255, 0, 0, 0.7);
-  box-shadow: 0px 1px 2px 0px  rgba(255, 0, 0, 0.7),
-  1px 2px 4px 0px  rgba(255, 0, 0, 0.7);
+  border: 1px solid rgba(255, 0, 0, 0.7);
+  box-shadow: 0px 1px 2px 0px rgba(255, 0, 0, 0.7),
+    1px 2px 4px 0px rgba(255, 0, 0, 0.7);
 
-
-
-  &:hover{
+  &:hover {
     transition: 0.3s all;
-    backdrop-filter:blur(10px);
+    backdrop-filter: blur(10px);
   }
 
-  img{
+  img {
     width: 10px;
     height: 10px;
-    }
-  
-  .check_mark{
+  }
+
+  .check_mark {
     z-index: 1;
     left: 15px;
     display: flex;
     position: relative;
   }
-  .cross{
+  .cross {
     z-index: 1;
     left: 4px;
     display: flex;
@@ -585,85 +514,76 @@ visibility: hidden;
   }
 }
 
-.foter_form_regist.active{
+.foter_form_regist.active {
   transition: 0.3s all;
-  border: 1px solid   rgba(102, 255, 0, 0.7);
-  box-shadow: 0px 1px 2px 0px rgb(21, 255, 0),
-     1px 2px 4px 0px rgb(21, 255, 0),
-   
-
+  border: 1px solid rgba(102, 255, 0, 0.7);
+  box-shadow: 0px 1px 2px 0px rgb(21, 255, 0), 1px 2px 4px 0px rgb(21, 255, 0);
 }
 
-.foter_form_regist_window:hover .content_footer{}
-
-.content_footer{
- z-index: 5;
- width: 10px;
- height: 10px;
- display: flex;
- right:  21px ; ////////
- margin-left: 5px;
- margin-right: 5px;
- border-radius: 10px;
- position: relative;
- transition: 0.5s all;
- background-color: rgb(245, 4, 4);
+.foter_form_regist_window:hover .content_footer {
 }
 
-.content_footer.yes{
+.content_footer {
+  z-index: 5;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  right: 21px; ////////
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.5s all;
+  background-color: rgb(245, 4, 4);
+}
+
+.content_footer.yes {
   right: 0;
   background-color: rgb(21, 255, 0);
-  }
-
-  
+}
 
 //////////////////////////////
 
-
-.line_top{
-width: 55px;
-height: 1px;
-bottom: 208px;
-left: 50px;
-position: relative;
-box-shadow: $mainBoxShadow;
-transition: 0.2s all;  
-background-color: gold;
+.line_top {
+  width: 55px;
+  height: 1px;
+  bottom: 208px;
+  left: 50px;
+  position: relative;
+  box-shadow: $mainBoxShadow;
+  transition: 0.2s all;
+  background-color: gold;
 }
 
-
-
-.line_left{
+.line_left {
   width: 1px;
   height: 55px;
   bottom: 180px;
   margin-right: -47px;
   position: relative;
   box-shadow: $mainBoxShadow;
-  transition: 0.2s all;  
+  transition: 0.2s all;
   background-color: gold;
-  
 }
 
-.line_right{
+.line_right {
   width: 1px;
   height: 55px;
   bottom: -175px;
   margin-left: -50px;
   position: relative;
   box-shadow: $mainBoxShadow;
-  transition: 0.2s all;  
+  transition: 0.2s all;
   background-color: gold;
 }
 
-  .line_bottom{
-    width: 55px;
-    height: 1px;
-    bottom: -205px;
-    left: -50px;
-    position: relative;
-    box-shadow: $mainBoxShadow;
-    transition: 0.2s all;  
-    background-color: gold;
-  }
-    
+.line_bottom {
+  width: 55px;
+  height: 1px;
+  bottom: -205px;
+  left: -50px;
+  position: relative;
+  box-shadow: $mainBoxShadow;
+  transition: 0.2s all;
+  background-color: gold;
+}

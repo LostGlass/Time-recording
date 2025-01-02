@@ -1,10 +1,13 @@
-$borderCalor:#e6b333;
+$borderCalor: #e6b333;
 $fontFamily: "Courier New", Courier, monospace;
 $mainColor: rgba(124, 14, 124, 0.658);
-$mainColorUpWindow:rgba(124, 14, 124, 0.952);
-$mainBoxShadow:  0px 8px  20px 2px gold;
-::-webkit-scrollbar { width: 0px; display: none; }
-*{
+$mainColorUpWindow: rgba(124, 14, 124, 0.952);
+$mainBoxShadow: 0px 8px 20px 2px gold;
+::-webkit-scrollbar {
+  width: 0px;
+  display: none;
+}
+* {
   margin: 0;
   padding: 0;
 }
@@ -17,37 +20,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
- 
 }
 
-.button_stop_time.active{
+.button_stop_time.active {
   display: block;
 }
 
 .button_start_time.active {
   display: none;
 }
-.action_confirmation.active{
+.action_confirmation.active {
   display: flex;
 }
 
-.pop_up_icons.active{
+.pop_up_icons.active {
   display: flex;
 }
 
-.wrap_button_action_confirmation{
+.wrap_button_action_confirmation {
   display: flex;
 }
-
-
-
 
 //БЛОК ОКНА РЕГИСТРАЦИИ(НАЧАЛО//
 
-
 //БЛОК ОКНА РЕГИСТРАЦИИ(КОНЕЦ)//
-
-
 
 .global_wrap_time {
   width: 300px;
@@ -57,13 +53,11 @@ body {
   border: 1px solid gold;
   box-shadow: $mainBoxShadow;
   z-index: 1;
-  
 
   .wrap_form {
     display: flex;
     align-items: center;
     justify-content: center;
-    
   }
 
   .mein_timer_wrap {
@@ -71,7 +65,6 @@ body {
     border: 1px solid black;
     margin-top: 10%;
     border: none;
-    
 
     .mein_timer {
       position: relative;
@@ -83,31 +76,34 @@ body {
       border: none;
       display: inline;
     }
-    .mein_timer.active{
-     color: gold;
+    .mein_timer.active {
+      color: gold;
       animation-name: blinker;
       animation-iteration-count: infinite;
-      animation-timing-function: cubic-bezier(1.0,0,0,1.0);
-      animation-duration:1s;
+      animation-timing-function: cubic-bezier(1, 0, 0, 1);
+      animation-duration: 1s;
       -webkit-animation-name: blinker;
       -webkit-animation-iteration-count: infinite;
-      -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+      -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
       -webkit-animation-duration: 1s;
     }
-     
+
     @keyframes blinker {
-      from { box-shadow: 0px 0px  7px 2px gold;}
-      to {  }
-      
+      from {
+        box-shadow: 0px 0px 7px 2px gold;
+      }
+      to {
+      }
     }
-     
+
     @-webkit-keyframes blinker {
-      from {box-shadow: 0px 0px  7px 2px gold;}
-      to { }
+      from {
+        box-shadow: 0px 0px 7px 2px gold;
+      }
+      to {
+      }
     }
-    
-    
-    }
+  }
 }
 .wrap_button_time {
   margin-top: 5px;
@@ -232,206 +228,195 @@ body {
 
 //!! Всплывающие окно при закрытии секундомера крестиком(НАЧАЛО БЛОКА) !!
 
-.action_confirmation{
-position: absolute;
-z-index: 6;
-width: 350px;
-height: 120px;
-background-color: $mainColorUpWindow;
-border-radius: 10px;
-border: 1px solid gold;
-box-shadow: $mainBoxShadow;
-align-items: center;
-justify-content: center;
-display: none;
-
-
-.txt_action_confirmation{
+.action_confirmation {
   position: absolute;
-  display: flex;
-  z-index: 7;
-  top: 0;
-  margin-top: 15px;
-  padding: 1px 10px 1px 10px ;
-  color: rgb(253, 255, 252);
-  font-family: $fontFamily;
-  border-bottom: 1.5px solid rgb(253, 252, 252);
-  border-radius: 8px;
-  box-shadow: 1px 1px 10px  white;
-  cursor:context-menu;
-  transition: 0.3s all;
-  
-  &:hover{
-    box-shadow: 1px 1px 10px  gold;
-    border-bottom: 1.5px solid gold;
-    color: gold;
-    transition: 0.3s all;
-  }
-  img{
-    width: 13px;
-    height: 13px;
-    margin-top: 2px ;
-  }
-}
-
-
-
-.button_yes,.button_no{
-  color: rgb(253, 255, 252);
-  z-index: 7;
-  font-family: $fontFamily;
-  cursor: pointer;
-  margin-left: 20px;
-  border-bottom: 1.5px solid rgb(253, 252, 252);
-  border-radius: 5px;
-  padding: 1px;
-  background-image: linear-gradient(rgb(255, 165, 0),gold);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  transition: background-size 0.5s, color 0.5s;
-
-}
-
-.button_yes:hover{
-  color: rgb(115, 255, 0);
-  border-bottom: 1.5px solid  rgb(115, 255, 0);
-  background-size: 100% 100%;
-}
-.button_no:hover {
-  color: rgb(255, 0, 0);
-  border-bottom: 1.5px solid  rgb(255, 0, 0);
-  background-size: 100% 100%;
-}
-
-.img_warning_action_confirmation{
   z-index: 6;
-  position: absolute;
-  width: 120px;
+  width: 350px;
   height: 120px;
-  
-}
+  background-color: $mainColorUpWindow;
+  border-radius: 10px;
+  border: 1px solid gold;
+  box-shadow: $mainBoxShadow;
+  align-items: center;
+  justify-content: center;
+  display: none;
 
+  .txt_action_confirmation {
+    position: absolute;
+    display: flex;
+    z-index: 7;
+    top: 0;
+    margin-top: 15px;
+    padding: 1px 10px 1px 10px;
+    color: rgb(253, 255, 252);
+    font-family: $fontFamily;
+    border-bottom: 1.5px solid rgb(253, 252, 252);
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px white;
+    cursor: context-menu;
+    transition: 0.3s all;
 
+    &:hover {
+      box-shadow: 1px 1px 10px gold;
+      border-bottom: 1.5px solid gold;
+      color: gold;
+      transition: 0.3s all;
+    }
+    img {
+      width: 13px;
+      height: 13px;
+      margin-top: 2px;
+    }
+  }
+
+  .button_yes,
+  .button_no {
+    color: rgb(253, 255, 252);
+    z-index: 7;
+    font-family: $fontFamily;
+    cursor: pointer;
+    margin-left: 20px;
+    border-bottom: 1.5px solid rgb(253, 252, 252);
+    border-radius: 5px;
+    padding: 1px;
+    background-image: linear-gradient(rgb(255, 165, 0), gold);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.5s, color 0.5s;
+  }
+
+  .button_yes:hover {
+    color: rgb(115, 255, 0);
+    border-bottom: 1.5px solid rgb(115, 255, 0);
+    background-size: 100% 100%;
+  }
+  .button_no:hover {
+    color: rgb(255, 0, 0);
+    border-bottom: 1.5px solid rgb(255, 0, 0);
+    background-size: 100% 100%;
+  }
+
+  .img_warning_action_confirmation {
+    z-index: 6;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+  }
 }
 
 //!!  !Всплывающие окно при закрытии секундомера крестиком(КОНЕЦ БЛОКА!
 
-
 .pop_up_icons {
-position: absolute;
-z-index: 5;
-width: 350px;
-height: 120px;
-background-color: $mainColorUpWindow;
-border-radius: 10px;
-border: 1px solid gold;
-box-shadow: $mainBoxShadow;
-align-items: center;
-justify-content: center;
-display: none;
+  position: absolute;
+  z-index: 5;
+  width: 350px;
+  height: 120px;
+  background-color: $mainColorUpWindow;
+  border-radius: 10px;
+  border: 1px solid gold;
+  box-shadow: $mainBoxShadow;
+  align-items: center;
+  justify-content: center;
+  display: none;
 
-.save_time{
-  color: rgb(253, 255, 252);
-  font-family: $fontFamily;
-  cursor: pointer;
-  margin-left: 5px;
-  border-bottom: 1.5px solid rgb(253, 252, 252);
-  border-radius: 5px;
-  padding: 1px;
-  background-image: linear-gradient(orange,gold);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  transition: background-size 0.5s, color 0.5s;
+  .save_time {
+    color: rgb(253, 255, 252);
+    font-family: $fontFamily;
+    cursor: pointer;
+    margin-left: 5px;
+    border-bottom: 1.5px solid rgb(253, 252, 252);
+    border-radius: 5px;
+    padding: 1px;
+    background-image: linear-gradient(orange, gold);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.5s, color 0.5s;
 
-  
-
-  &:hover {
-    color: rgb(115, 255, 0);
-    border-bottom: 1.5px solid  rgb(115, 255, 0);
-    background-size: 100% 100%;
+    &:hover {
+      color: rgb(115, 255, 0);
+      border-bottom: 1.5px solid rgb(115, 255, 0);
+      background-size: 100% 100%;
+    }
   }
-}
 
-.reset_time{
-  color: rgb(253, 255, 252);
-  font-family: $fontFamily;
-  cursor: pointer;
-  margin-left: 5px;
-  border-bottom: 1.5px solid rgb(253, 252, 252);
-  border-radius: 5px;
-  padding: 1px;
-  background-image: linear-gradient(orange,gold);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  transition: background-size 0.5s, color 0.5s;
+  .reset_time {
+    color: rgb(253, 255, 252);
+    font-family: $fontFamily;
+    cursor: pointer;
+    margin-left: 5px;
+    border-bottom: 1.5px solid rgb(253, 252, 252);
+    border-radius: 5px;
+    padding: 1px;
+    background-image: linear-gradient(orange, gold);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.5s, color 0.5s;
 
-  &:hover {
-    color: rgb(255, 115, 0);
-    border-bottom: 1.5px solid rgb(255, 0, 0);
-    background-size: 100% 100%;
+    &:hover {
+      color: rgb(255, 115, 0);
+      border-bottom: 1.5px solid rgb(255, 0, 0);
+      background-size: 100% 100%;
+    }
   }
-}
 
-.close_pop_up_icons{
-position: absolute;
-right: 0;
-top: 0;
-margin: 13px;
-width: 30px;
-height: 30px;
-display: flex;
-align-items: center;
-justify-content: center;
+  .close_pop_up_icons {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 13px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-img{
-  width: 15px;
-  height: 15px;
-  padding: 5px;
-  cursor: pointer;
-  border-radius: 8px;
-  background-color: #ffffff73;
-  transition: 0.5s all;
-  background-image: linear-gradient(orange,gold);
-  background-position: 100% 100%;
-  background-size: 100% 100%;
-  box-shadow: 1px 1px 10px  white;
-  
+    img {
+      width: 15px;
+      height: 15px;
+      padding: 5px;
+      cursor: pointer;
+      border-radius: 8px;
+      background-color: #ffffff73;
+      transition: 0.5s all;
+      background-image: linear-gradient(orange, gold);
+      background-position: 100% 100%;
+      background-size: 100% 100%;
+      box-shadow: 1px 1px 10px white;
 
-  &:hover{
-    background-color: #2221219a;
-    transition: 0.5s all;
-    transform: rotate(360deg);
-    background-size: 100% 100%;
-    
+      &:hover {
+        background-color: #2221219a;
+        transition: 0.5s all;
+        transform: rotate(360deg);
+        background-size: 100% 100%;
+      }
+    }
   }
-}
-}
-.timer_form_wariableJS{
-position: absolute;
-display: flex;
-z-index: 7;
-top: 0;
-width: 73px;
-border: 1px solid black;
-margin-top: 8%;
-font-weight:700 ;
-border: none;
-color: rgb(255, 230, 1);
-width: 65px;
-font-family: $fontFamily;
-background-color: rgba(22, 194, 80, 0);
-border: none;
-display: inline;
-}
+  .timer_form_wariableJS {
+    position: absolute;
+    display: flex;
+    z-index: 7;
+    top: 0;
+    width: 73px;
+    border: 1px solid black;
+    margin-top: 8%;
+    font-weight: 700;
+    border: none;
+    color: rgb(255, 230, 1);
+    width: 65px;
+    font-family: $fontFamily;
+    background-color: rgba(22, 194, 80, 0);
+    border: none;
+    display: inline;
+  }
 }
 
 //time_block_control_container
 
-.time_block_control_container{
-  right:20px;
+.time_block_control_container {
+  right: 20px;
   top: 20px;
   width: 330px;
   height: 0px;
@@ -439,35 +424,34 @@ display: inline;
   overflow: scroll;
   position: absolute;
   padding: 30px 10px 0px 10px;
-  box-shadow:0px 12px  20px 0px gold ;
+  box-shadow: 0px 12px 20px 0px gold;
   background-color: $mainColor;
-  border-bottom-left-radius: 12px ;
-  border-bottom-right-radius: 12px ;
-  border: 1px solid  $borderCalor;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: 1px solid $borderCalor;
   transition: 0.5s all;
-   backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 
-div{
-  margin-top: 5px;
-  border-bottom: 1px solid rgb(185, 64, 8);
+  div {
+    margin-top: 5px;
+    border-bottom: 1px solid rgb(185, 64, 8);
+  }
 }
-
-}
-.time_block_control_container.active{
+.time_block_control_container.active {
   height: 500px;
   transition: 0.5s all;
 }
 
-.time_control_window_roll_up_and_roll_down_unit{
+.time_control_window_roll_up_and_roll_down_unit {
   bottom: 0;
   top: 20px;
-  right:21px;
+  right: 21px;
   width: 350px;
   height: 20px;
   display: flex;
   color: white;
   cursor: pointer;
-  overflow-y:hidden;
+  overflow-y: hidden;
   position: absolute;
   align-items: center;
   transition: 0.5s all;
@@ -475,92 +459,82 @@ div{
   box-shadow: $mainBoxShadow;
   background-color: $borderCalor;
   border-bottom: 1px solid gold;
-  
 
- &:hover{
-
-  transition: 0.5s all;
-  box-shadow: 0px 8px  20px 2px gold;
-  box-shadow: 0px 8px  25px 4px gold;
-  box-shadow: 0px 8px  30px 6px gold;
-
-  img{
+  &:hover {
     transition: 0.5s all;
-    box-shadow: 1px 1px  15px 5px white;
-    box-shadow: 2px 2px  16px 6px white;
-    box-shadow: 3px 3px  17px 7px white;
-    outline: 2px solid white ;
+    box-shadow: 0px 8px 20px 2px gold;
+    box-shadow: 0px 8px 25px 4px gold;
+    box-shadow: 0px 8px 30px 6px gold;
+
+    img {
+      transition: 0.5s all;
+      box-shadow: 1px 1px 15px 5px white;
+      box-shadow: 2px 2px 16px 6px white;
+      box-shadow: 3px 3px 17px 7px white;
+      outline: 2px solid white;
+    }
   }
 
- }
+  span {
+    padding: 20px;
+    transition: 0.5s all;
+    border-left: 5px dotted white;
+    border-right: 5px dotted white;
+  }
 
-
- span{
-
-  padding: 20px;
-  transition: 0.5s all;
-  border-left: 5px dotted white ;
-  border-right: 5px dotted white ;
-
- }
- 
- .ikons_time_control_window_roll{
-
-  width: 25px;
-  bottom:1px ;
-  left: 50px;
-  height: auto;
-  position: relative;
-  border-radius: 20px;
-  transition: 0.5s all;
-
+  .ikons_time_control_window_roll {
+    width: 25px;
+    bottom: 1px;
+    left: 50px;
+    height: auto;
+    position: relative;
+    border-radius: 20px;
+    transition: 0.5s all;
+  }
 }
 
-}
-
-.ikons_time_control_window_roll.active{
+.ikons_time_control_window_roll.active {
   transition: 0.5s all;
   transform: rotate(180deg);
 }
 
-.button_delete_time_save_vindow{
+.button_delete_time_save_vindow {
   font-size: 13px;
   padding: 0px 5px 0px 5px;
   margin: 10px 5px 5px 10px;
   color: white;
-  background-color:black;
+  background-color: black;
   outline: 1px solid red;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.5s all;
-  &:hover{
-  transition: 0.5s all;
-  background-color:red;
+  &:hover {
+    transition: 0.5s all;
+    background-color: red;
   }
-  
 }
 
-.exit_in_registration{
+.exit_in_registration {
   top: 20px;
   left: 30px;
   width: 30px;
   padding: 4px;
   height: auto;
   position: absolute;
-border-radius: 8px;
-transition: 0.5s all;
+  border-radius: 8px;
+  transition: 0.5s all;
 
-  a{
+  a {
     text-decoration: none;
     color: white;
   }
-  &:hover{
+  &:hover {
     transition: 0.5s all;
     cursor: pointer;
-    box-shadow: 1px 1px  15px 5px white;
-    box-shadow: 2px 2px  16px 6px white;
-    box-shadow: 3px 3px  17px 7px white;
-    outline: 1px solid white ;
+    box-shadow: 1px 1px 15px 5px white;
+    box-shadow: 2px 2px 16px 6px white;
+    box-shadow: 3px 3px 17px 7px white;
+    outline: 1px solid white;
   }
 }
 

@@ -24,7 +24,6 @@ var startStopTime = Boolean;
 var base = 60;
 var clocktimer, dateObj, dh, dm, ds, ms;
 var readout = "";
-var objectSavingTimeDataToLocalStorage = {};
 var h = 1,
   m = 1,
   tm = 1,
@@ -35,34 +34,49 @@ var h = 1,
 
 // БЛОК ОБЬЯВЛЕНИЯ ДАННЫХ(КОНЕЦ)//
 
-function generateSaveTimeBloc(readout, objectSavingTimeDataToLocalStorage) {
+async function generateSaveTimeBloc(readout) {
   const date = new Date();
   const newDiv = document.createElement("div");
   const buttonDeleteTime = document.createElement("button");
   const theLastChild = timeBlock.lastChild;
   const theLastChildNewDiv = newDiv.lastChild;
-  buttonDeleteTime.innerHTML = "Delete";
-  buttonDeleteTime.classList.add("button_delete_time_save_vindow");
-  newDiv.innerHTML = `<span>${date.toLocaleDateString()} --- ${readout}</span>`;
-  timeBlock.insertBefore(newDiv, theLastChild);
-  newDiv.insertBefore(buttonDeleteTime, theLastChildNewDiv);
-  objectSavingTimeDataToLocalStorage = {
-    buttonDeleteTime,
-    theLastChild,
-    theLastChildNewDiv,
-    newDiv,
-    timeBlock,
-    readout,
-  };
-  return localStorage.setItem(
-    date.toLocaleDateString(),
-    JSON.stringify(objectSavingTimeDataToLocalStorage)
-  );
+  const a = (buttonDeleteTime.innerHTML = "Delete");
+  const b = buttonDeleteTime.classList.add("button_delete_time_save_vindow");
+  const ab =
+    (newDiv.innerHTML = `<span>${date.toLocaleDateString()} --- ${readout}</span>`);
+  const aw = timeBlock.insertBefore(newDiv, theLastChild);
+  const ar = newDiv.insertBefore(buttonDeleteTime, theLastChildNewDiv);
+
+  var data = [];
+  data.push(newDiv);
+  data.push(buttonDeleteTime);
+  data.push(theLastChild);
+  data.push(theLastChildNewDiv);
+  data.push(a);
+  data.push(b);
+  data.push(ab);
+  data.push(aw);
+  data.push(ar);
+
+  const response = await fetch("http://localhost:2000/server/html", {
+    method: "POST",
+    mode: "no-cors",
+    body: data,
+    headers: {
+      "Content-Type": "text/html; charset=utf-8",
+    },
+  });
+
+  const jsonResponse = await response.json();
+  console.log(jsonResponse);
+
+  return true;
 }
+
 // БЛОК С АКТИВНЫМИ СОБЫТИЯМИ (НАЧАЛО)//
-exitInRegistration.addEventListener("click", () => {
-  localStorage.getItem();
-});
+// exitInRegistration.addEventListener("click", () => {
+//   localStorage.getItem();
+// });
 
 timeControlWindowRoll.addEventListener("click", () => {
   timeBlock.classList.toggle("active");
@@ -104,14 +118,11 @@ resetTimePopUpIcons.addEventListener("click", () => {
 // /////////+/
 
 saveTime.addEventListener("click", () => {
-  generateSaveTimeBloc(readout, objectSavingTimeDataToLocalStorage);
-  console.log(JSON.parse(localStorage.getItem("17.10.2024")));
+  generateSaveTimeBloc(readout);
   ClearСlock();
   showPopUpIcons.classList.remove("active");
   action_confirmation.classList.remove("active");
 });
-
-// console.log(JSON.parse(localStorage.getItem("08.10.2024")));
 // /////////+/
 
 // БЛОК С АКТИВНЫМИ СОБЫТИЯМИ (КОНЕЦ)//
